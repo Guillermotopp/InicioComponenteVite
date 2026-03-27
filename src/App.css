@@ -1,0 +1,150 @@
+/* App.css - Estilos Material Design Simulado */
+
+/* 1. Importamos la fuente estándar de Material Design */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  --primary-color: #3f51b5; /* Indigo estándar de Material Design */
+  --primary-hover: #303f9f;
+  --bg-color: #f5f5f5; /* Fondo gris muy claro */
+  --card-bg: #ffffff;
+  --text-primary: rgba(0, 0, 0, 0.87);
+  --text-secondary: rgba(0, 0, 0, 0.6);
+  --border-color: rgba(0, 0, 0, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  
+  display: flex;             /* Usamos Flexbox */
+  justify-content: center;    /* Centra horizontalmente */
+  align-items: center;        /* Centra verticalmente */
+  
+  min-height: 100vh;         /* 100% de la altura de la pantalla */
+  width: 100vw;              /* 100% del ancho de la pantalla */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;          /* Evita scrolls innecesarios si la tarjeta es pequeña */
+}
+
+/* Contenedor principal centrado */
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* La Tarjeta de Login (Card con elevación) */
+.login-card {
+  background-color: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 8px; /* Bordes sutiles */
+  /* Sombra nivel 2 de Material Design */
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 
+              0px 2px 2px 0px rgba(0,0,0,0.14), 
+              0px 1px 5px 0px rgba(0,0,0,0.12);
+  width: 100%;
+  max-width: 400px; /* Ancho máximo profesional */
+  text-align: center;
+}
+
+/* Cabecera: Emoji grande y título */
+.login-header {
+  margin-bottom: 2rem;
+}
+
+.login-emoji {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.login-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+}
+
+/* --- Estilos para los campos de entrada (Inputs) --- */
+
+/* Contenedor del grupo (Label + Input) */
+.input-group {
+  display: flex;
+  align-items: center; /* Centrado vertical */
+  margin-bottom: 1.5rem;
+  position: relative;
+  width: 100%;
+}
+
+/* El Label (Email / Password) a la izquierda */
+.material-label {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  width: 100px; /* Ancho fijo para alinearlos */
+  text-align: left;
+  font-weight: 400;
+}
+
+/* El Campo de texto real a la derecha */
+.material-input {
+  flex: 1; /* Ocupa todo el espacio restante a la derecha */
+  padding: 8px 0;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid var(--border-color); /* Solo línea inferior */
+  background: transparent;
+  transition: border-color 0.2s;
+  color: var(--text-primary);
+}
+
+/* Efecto de foco (línea de color al hacer clic) */
+.material-input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 7px; /* Compensar el grosor del borde */
+}
+
+/* --- Estilo del Botón Material Design (Raised Button) --- */
+.material-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase; /* Clásico de MD */
+  letter-spacing: 1.25px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  margin-top: 1rem;
+  width: 100%; /* Botón ancho total */
+  /* Sombra nivel 1 */
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 
+              0px 2px 2px 0px rgba(0,0,0,0.14), 
+              0px 1px 5px 0px rgba(0,0,0,0.12);
+}
+
+.material-button:hover {
+  background-color: var(--primary-hover);
+  /* Aumentar sombra al hover */
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 
+              0px 4px 5px 0px rgba(0,0,0,0.14), 
+              0px 1px 10px 0px rgba(0,0,0,0.12);
+}
