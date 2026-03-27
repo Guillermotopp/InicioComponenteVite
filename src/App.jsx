@@ -14,6 +14,10 @@ function App() {
   // 3. Texto del botón real
   const textoDelBoton = "Iniciar Sesión";
 
+const manejarClick = () => {
+        alert(" Click !!! ")
+    }
+
   return (   
     <>
       <LoginFormCard 
@@ -22,6 +26,7 @@ function App() {
         labelEmail={labelEmail}
         labelPassword={labelPassword}
         textoBoton={textoDelBoton}
+        onClick = {manejarClick}
       />
     </>
   );
