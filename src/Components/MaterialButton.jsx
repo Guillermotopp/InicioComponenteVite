@@ -1,11 +1,8 @@
 import React from "react";
 
-const MaterialButton = ({texto}) => {
-    const manejarClick = () => {
-        alert(" Click !!! ")
-    }
+const MaterialButton = ({texto, onClick}) => {
     return (
-        <button className="material-button" onClick={manejarClick}> 
+        <button className="material-button" onClick={onClick}> 
             {texto} 
         </button>
     );

@@ -14,14 +14,21 @@ function App() {
   // 3. Texto del botón real
   const textoDelBoton = "Iniciar Sesión";
 
+  const [mensaje, setMensaje] = useState("Inicio");
+
+  const manejarClick = () => {
+        setMensaje(" Hizo Click ")
+  }
+
   return (   
     <>
       <LoginFormCard 
         emoji={miEmoji} 
-        titulo={tituloPagina}
+        titulo={mensaje}
         labelEmail={labelEmail}
         labelPassword={labelPassword}
         textoBoton={textoDelBoton}
+        onClick = {manejarClick}
       />
     </>
   );
